@@ -1,0 +1,897 @@
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+	
+		<STYLE TYPE="text/css">/*----------------------- AWS.css ----------------------- */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	background-color: #fff;
+	color: #707070;
+	margin: 0;
+	padding: 0;
+}
+/*---------------------------------------------------------*/
+
+a 								{	color: #000;	text-decoration: none;			}
+img 							{	border: none;	vertical-align: middle;			}
+form, p 						{	margin:0;	padding:0;							}
+em 								{	font-style: normal;								}
+p.text 							{	margin: 0 0 0.75em 0;	line-height: 1.3em;		}
+p.text em 						{	color:#3876A4; 	 								}
+select, input, textarea 		{	color: #555;	font-size: 9pt;	vertical-align: middle;	margin-right:1px;	}
+h1, h2, h3, h4 					{	color: #707070;	font-weight: normal;	margin: 0 0 0.25em 0;				}
+h1 a, h2 a, h3 a, h4 a 			{	color: #707070;		}
+h1 								{	font-size: 125%;	font-weight: bold;	padding-left:10px;	padding-bottom:7px;	background:url(/web/imgs/title_icon.gif) left top no-repeat;	}
+h1 em							{	color:#3876A4;		}
+h2 								{	font-size: 110%;	font-weight: bold;	padding-left:10px;	height:18px;		background:url(/web/imgs/m_icon.gif) left 3px no-repeat;		}
+h2 em 							{	color:#3876A4;		}
+h3 								{	font-size: 100%;	border-bottom: none;padding-left:15px;	margin-bottom:5px;	background:url(/web/imgs/icon_04.gif) left 50% no-repeat;		}
+h3 em 							{	color:#000;		font-weight:bold;	margin-right:10px;		}
+h3 span 						{	color:#3876A4;	font-weight:bold;	margin:0 5px;			}
+h4 								{	font-size: 85%;	font-weight:bold;							}
+h4 em 							{	color:#3876A4;												}
+.button 						{	cursor: pointer;	vertical-align: middle;					}
+.button2 						{	text-align:center;	vertical-align: middle;		/*	cursor: pointer;	*/		}
+body.basic 						{	text-align: center;	background-color: #F6F6F6;	background:url(/web/imgs/m_bg.gif) left top repeat-x;	}
+ul, li 							{	margin:0;	padding:0;	list-style: none;	}
+
+/*----------------------- table ------------------------*/
+
+table.type_a, 
+table.type_a1 					{	border-top:2px #5A9FC8 solid;	border-bottom:1px #5A9FC8 solid;	margin-bottom: 20px;	border-collapse: collapse;	/*	width: 98%; */	font-size:90%;	}
+table.type_a  thead th,
+table.type_a1 thead th 			{	text-align: center;	background-color: #D5E8FC;	color: #333333;		border: #CFCFCF 1px solid;	padding-top: 3px;	padding-bottom: 3px;	}
+table.type_a  thead td,
+table.type_a1 thead td 			{	padding-top: 2px;	padding-bottom: 2px;	color: #707070;	background-color: #f1f1f1;	border: #CFCFCF 1px solid;	text-align:center;		}
+table.type_a  thead td.cate,
+table.type_a1 thead td.cate 	{	color: #306E95;	background-color: #DDF4FC;	line-height:110%;								}
+table.type_a  tbody th,
+table.type_a1 tbody th 			{	text-align: left;	color: #306E95;	background-color: #EFFBFF;	border: #CFCFCF 1px solid;	}
+table.type_a  tbody th.cate,
+table.type_a1 tbody th.cate 	{	background-color: #f5f5f5;	height:18px;	color:#707070;		}
+table.type_a  tbody td 			{	color: #707070;	/*	background-color: #fff;*/	border: #CFCFCF 1px solid;	text-align:right;	height:18px;	padding:0px 1px 0px 0px;	/*	padding-right: 10px;*/	}
+table.type_a1 tbody td 			{	color: #707070;	/*	background-color: #fff;*/	border: #CFCFCF 1px solid;	text-align:right;	padding-right:2px;		}
+table.type_a  tbody td.l, 
+table.type_a1 tbody td.l 		{	color: #707070;	/*	background-color: #fff; */	border: #CFCFCF 1px solid;	text-align:left;	padding-left:15px;		}
+table.type_a  tbody td.select,
+table.type_a1 tbody td.select 	{	background-color: #f5f5f5;		}
+table.type_a  a:hover,
+table.type_a1 a:hover 			{	color:#000;		text-decoration: underline;		}
+
+/*--------------------------------------------------------*/
+
+table.type_b 					{	border-top:2px #5A9FC8 solid;	border-bottom:1px #5A9FC8 solid;	margin-bottom: 20px;	border-collapse: collapse;	/*	width: 98%;*/	font-size:80%;				}
+table.type_b thead th 			{	text-align: center;	color: #333;	background-color: #D5E8FC;	font-size:110%;	border: #CFCFCF 1px solid;	padding-top: 3px;	padding-bottom: 3px;	width: 102px;	}
+table.type_b tbody th 			{	text-align: right;	color: #707070;	background-color: #f1f1f1;	border: #CFCFCF 1px solid;	padding-top: 4px;	padding-bottom: 4px;	padding-right:10px;				}
+table.type_b tbody td 			{	padding-top: 7px;	padding-bottom: 5px;	padding-left:3px;	color: #000;	background-color: #fff;	border: #CFCFCF 1px solid;	height:70px;}
+table.type_b tbody td em 		{	color:#3876A4;								}
+table.type_b tbody td a 		{	color:#1663A8;								}
+table.type_b tbody td a:hover 	{	color:#000;		text-decoration: underline;	}
+table.type_b tbody th.red 		{	color:#BA0505;								}
+table.type_b tbody th.blue		{	color:#0C55A6;								}
+
+/*-----------------------  iframe ------------------------*/
+
+table.type_c 				{	border-top:2px #5A9FC8 solid;	border-collapse: collapse;	font-size:90%;	line-height:100%;	/*	width: 98%; */	}
+table.type_d 				{	border-collapse: collapse;	font-size:90%;	/*	width: 98%; */													}
+table.type_e 				{	border-bottom:1px #5A9FC8 solid;	border-collapse: collapse;	font-size:90%;	/*	width: 98%; */				}
+table.type_c thead th,
+table.type_d thead th,
+table.type_e thead th 		{	color: #333;	background-color: #D5E8FC;		text-align: center;	border: #CFCFCF 1px solid;	padding-top: 2px;	padding-bottom: 2px;	}
+table.type_d thead th 		{	color: #333;	background-color: #D5E8FC;		text-align: center;	border: #CFCFCF 1px solid;					}
+
+table.type_c thead td,
+table.type_d thead td,
+table.type_e thead td 		{	color: #707070;	background-color: #f1f1f1;		text-align:center;	border: #CFCFCF 1px solid;	height:16px;	}
+table.type_c thead td.cate,
+table.type_d thead td.cate,
+table.type_e thead td.cate 	{	color: #306E95;	background-color: #DDF4FC;		line-height:110%;												}
+table.type_c thead td.cate2,
+table.type_d thead td.cate2,
+table.type_e thead td.cate2 {	color: #306E95;	background-color: #DDF4FC;		text-align: right;	line-height:110%;	font-weight:normal;		}
+
+table.type_c tbody th,
+table.type_d tbody th,
+table.type_e tbody th 		{	color: #306E95;	background-color: #EFFBFF;		text-align: center;	height:16px;	border: #CFCFCF 1px solid;	}
+table.type_c tbody th.cate,
+table.type_d tbody th.cate,
+table.type_e tbody th.cate 	{	color:#707070;	background-color: #f5f5f5;																		}
+table.type_c tbody th.cate2,
+table.type_d tbody th.cate2,
+table.type_e tbody th.cate2 {	color:#707070;	background-color: #f5f5f5;		text-align: right;	font-weight:normal;							}
+table.type_c tbody th.cate3,
+table.type_d tbody th.cate3,
+table.type_e tbody th.cate3 {	color:#707070;	background-color: #EFFBFF;		text-align: right;	font-weight:normal;							}
+
+table.type_c tbody td 		{	color: #707070;	/*	background-color: #fff;*/	border: #CFCFCF 1px solid;	text-align:center;					}
+table.type_d tbody td 		{	color: #707070;	/*	background-color: #fff;*/	border: #CFCFCF 1px solid;	text-align:right;	height:16px;	}
+table.type_e tbody td 		{	color: #707070;	/*	background-color: #fff;*/	border: #CFCFCF 1px solid;	text-align:right;	height:16px;	}
+
+p.paging 					{	text-align:center;	font-size:90%;		}
+p.paging img 				{	margin:0 5px;							}
+p.paging span 				{	color: #3876A4;	font-weight:bold;		}
+p.paging .unselect 			{	color: #707070;	font-weight:normal;		}
+
+table.calendar 				{	table-layout:fixed;	line-height:100%;	}
+table.calendar td.factor 	{	border:0;	height:0;	padding:0px 0;	width:32px;	color: #3876A4;						}
+table.calendar td.data 		{	border:0;	height:0;	padding:0px 0;	width:45px;	color: #222;	text-align:right;	}
+table.calendar td.unit 		{	border:0;	height:0;	padding:0px 0;	width:18px;	color: #222;	text-align:right;	}
+
+/*-----------------------  popup ------------------------*/
+
+#pop 						{	border-top:7px #3876A4 solid;	width:470px;	padding:15px;}
+#pop h1 					{	height:18px;	border-bottom:1px #E9E9E9 solid;	padding-bottom:10px;	margin-bottom:20px;}
+#pop h2 					{	font-size: 100%;	font-weight: bold;	padding-left:10px;	height:18px;	padding-bottom:10px;	background:none;}
+#pop div.info 				{	padding-left:10px;	margin-bottom:15px;	border-bottom:1px #E9E9E9 solid;}
+#pop div.info p.img 		{	text-align:center;	padding-bottom:20px;}
+#pop div.info ul 			{	padding-bottom:10px;}
+#pop div.info li 			{	padding-bottom:7px;	}
+#pop div.info li em 		{	font-weight:bold;	color:#3876A4;	}
+#pop ul.under_info 			{	background-color:#f5f5f5;	padding:10px 20px;	margin-bottom:15px;	}
+#pop div.action 			{	width:100%;	text-align:center;	height:25px;	background-color:#3876A4;	}
+div.info p.data_img 		{	margin-bottom:10px;	}
+
+/*-----------------------  main ------------------------*/
+
+#all_wrapper 						{	background:url(/web/imgs/top_bg.gif) left top repeat-x;	text-align: left;	width: 100%;	min-width: 950px;	}
+#wrapper 							{	text-align: left;	background-color: #fff;	width: 100%;	padding:0;	}
+#header 							{	text-align: left;	background-color: #fff;	width: 100%;	background:url(/web/imgs/top_bg.gif) left top repeat-x;	height:100px;	}
+#header div.top 					{	height:50px;								}
+#header div.top p.logo 				{	position:absolute;	left:17px;	top: 4px;	}
+#header div.top p.top_info 			{	font-size:7pt;	text-align:right;	padding-top:5px;	padding-right:17px;	}
+#header div.top p.top_info a 		{	color:#666;		}
+#header div.top p.top_info a:hover 	{	color:#000000;	text-decoration: underline;		}
+#header div.top p.top_info em 		{	color:#3876A4;	font-weight:bold;				}
+#header div.top p.top_menu 			{	font-size:7pt;	text-align:right;	padding-top:20px;	padding-right:17px;	}
+#header div.top p.top_menu a 		{	color:#666;		}
+#header div.top p.top_menu a:hover 	{	color:#000000;	text-decoration: underline;		}
+#header div.top p.top_menu em 		{	color:#3876A4;	font-weight:bold;				}
+
+#header div.menu 					{	width:950px;	margin-top:2px;	background:url(/web/imgs/menu_bg.gif) left top repeat-x;	text-align:center;		height:38px;	}
+#header div.menu ul 				{	line-height:35px;	}
+#header div.menu li 				{	color:#FFF;	display: inline;	font-size: 10pt; 	font-weight:bold;	background:url(/web/imgs/menu_line.gif) right top no-repeat;	padding-right:60px;	padding-left:60px;	}
+#header div.menu li.last 			{	background:none;	}
+#header div.menu li a 				{	color:#fff;			}
+#header div.menu li a:hover 		{	color:#000000;		text-decoration: underline;			}
+#wrapper 							{	height:1%;	min-height:600px;	padding-bottom:20px;	}
+* html #wrapper 					{	height:500px;	padding-bottom:20px;					}
+
+#wrapper div.admin_m_menu,
+#wrapper div.map 					{	position:absolute;	background:url(/web/imgs/warpper_bg.gif) left top no-repeat;	padding-top:15px;	padding-left:15px;	width:400px;		}
+#wrapper div.map div.layer 			{	z-index:100;	position:absolute;	left:223px;	top:433px;	height:140px;	width:187px;	}
+#wrapper div.map div.layer h3 		{	color:#fff;	height:20px;	width:173px;	padding:9px 6px;	text-align:center;	background:none;	font-weight:bold;	margin-bottom:0;	}
+#wrapper div.map div.layer table 	{	margin-left:10px;	padding-top:3px;	padding-left:7px;	width:165px;	}
+#wrapper div.map div.layer td.factor{	background:url(/web/imgs/icon_01.gif) left 50% no-repeat;	color:#333;	margin-bottom:2px;	width:50px;		}
+#wrapper div.map div.layer td.data  {	color:#3876A4;	margin-bottom:2px;	text-align:right;	width:60px;			}
+#wrapper div.map div.layer td.unit  {	margin-bottom:2px;	text-align:right;										}
+
+#wrapper div.admin_m_menu h2 		{	color:#fff;	background-color:#3674AD;	padding-top:2px;	height:20px;	margin-bottom:15px;		}	
+#wrapper div.admin_m_menu ul 		{	margin-left:10px;	margin-bottom:30px;																}
+#wrapper div.admin_m_menu li 		{	padding:3px 10px;	background:url(/web/imgs/icon_01.gif) left 50% no-repeat;						}
+#wrapper div.admin_m_menu li a 		{	color:#000;		}
+#wrapper div.admin_m_menu li a:hover{	color:#3876A4;	text-decoration: underline;		}
+
+#wrapper div.main_contents p.grahp 	{	width:515px;	padding-bottom:10px;	text-align:center;	}
+#wrapper div.main_contents 			{	padding-left:433px;	padding-top:15px;		}
+
+#wrapper div.main_contents div.city_info 					{	width:514px;	height:270px;	background:url(/web/imgs/city_info_bg.gif) left 50% no-repeat;	margin-bottom:22px;	}
+#wrapper div.main_contents div.city_info  em 				{	font-weight:bold;				}
+#wrapper div.main_contents div.city_info  p 				{	padding:10px 5px 0px 10px;		}
+#wrapper div.main_contents div.city_info2 					{	width:514px;	height:262px;	background:url(/web/imgs/city_info_bg2.gif) left 50% no-repeat;	margin-top:22px;	}
+#wrapper div.main_contents div.city_info2 h3 				{	margin-top:17px;	margin-left:15px;	}
+#wrapper div.main_contents div.city_info  p.select select 	{	margin-left:7px;						}
+#wrapper div.main_contents div.city_info  table 			{	width:450px;	margin-left:33px;	margin-top:18px;	}
+#wrapper div.main_contents div.city_info2 table 			{	width:450px;	margin-left:33px;	margin-top:14px;	}
+#wrapper div.main_contents div.city_info  table td.factor,
+#wrapper div.main_contents div.city_info2 table td.factor 	{
+	padding-left:15px;
+	padding-top:2px;
+	color:#FFF;
+	font-weight:bold;
+	background:url(/web/imgs/dt_bg.gif) left top repeat-y;
+	width:120px;
+	height:17px;
+	float:left;
+	clear:both;
+	border-bottom:1px #DFDFDF solid;
+}
+#wrapper div.main_contents div.city_info  table td.data ,
+#wrapper div.main_contents div.city_info2 table td.data  		{	height:19px;	border-bottom:1px #DFDFDF solid;	text-align:right;				}
+#wrapper div.main_contents div.city_info  table td.data , em,
+#wrapper div.main_contents div.city_info2 table td.data , em 	{	color:#3674AD;	}
+#wrapper div.main_contents div.city_info  table td.unit ,
+#wrapper div.main_contents div.city_info2 table td.unit  		{	height:19px;	border-bottom:1px #DFDFDF solid;	text-align:right;	width:50px;	}
+
+#wrapper div.main_contents ul.weather {
+	width:422px;
+	height:58px;
+	background:url(/web/imgs/weather_bg.gif) left top no-repeat;
+	padding-left:93px;
+	padding-top:10px;
+	margin-bottom:10px;
+}
+#wrapper div.main_contents ul.weather li {
+	background:url(/web/imgs/icon_02.gif) left 50% no-repeat;
+	padding-left:10px;
+	padding-top:5px;
+	color:#fff;
+	font-weight:bold;
+}
+#wrapper div.main_contents ul.weather li a {
+	color:#fff;
+}
+#wrapper div.main_contents ul.weather li a:hover {
+	color:#000000;
+	text-decoration: underline;
+}
+#wrapper div.main_contents ul.link_zone {
+	width:514px;
+	border-top:1px #D9D9D9 solid;
+	margin-bottom:10px;
+	height:150px;
+	padding-top:10px;
+	margin-bottom:13px;
+}
+#wrapper div.main_contents ul.link_zone li {
+	width:250px;
+	float:left;
+	padding-left:0px;
+	padding-bottom:4px;
+}
+#wrapper div.main_contents ul.link_zone li.next {
+	width:264px;
+	clear:both;
+}
+#wrapper div.main_contents p.jump_menu {
+	width:504px;
+	background-color:#F1F1F1;
+	padding:5px 0 5px 10px;
+}
+
+#footer 			{					width:100%;		background-color:#fff;					}
+#footer div 		{	float:left;		height:70px;	background-color:#f0f0f0;				}
+#footer div p.logo 	{	float:left;						padding-left :20px;	padding-top:8px;	}
+#footer div p.addr 	{	float:right;	font-size:85%;	padding-right:20px;	padding-top:28px;	}
+
+/*-----------------------  left menu  ------------------------*/
+
+#wrapper div.left_menu 				{	position:absolute;	padding-top:3px;	padding-left:3px;	width:160px;	left:3px;	background:url(/web/imgs/warpper_bg.gif) left top no-repeat;	}
+#wrapper div.left_menu h2 			{	padding-top:12px;	padding-right:10px;	width:150px;	height:30px;	text-align:center;	color:#fff;	font-weight:bold;	margin-bottom:30px;	background:url(/web/imgs/left_menu_top_bg.gif) left top no-repeat;	}
+#wrapper div.left_menu h2 a 		{	color:#fff;			}
+#wrapper div.left_menu h2 a:hover 	{	color:#FCDA07;	text-decoration: underline;	}
+#wrapper div.left_menu li 			{	width:150px;	padding:5px;	font-weight:bold;	font-size:90%;	border-bottom:1px #E9E9E9 solid;	}
+#wrapper div.left_menu li a 		{	color:#707070;		}
+#wrapper div.left_menu li a:hover 	{	color:#3270AB;	text-decoration: underline;	}
+
+/*-----------------------  sub info  ------------------------*/
+
+#wrapper div.sub_info 				{	text-align:left;	margin-left:170px;	background-color:#999;	padding-top:15px;	padding-left:5px;	padding-bottom:50px;	background:url(/web/imgs/sub_line_bg.gif) left top repeat-y;	}
+div.sub_info div.title 				{	position:relative;	height:18px;	border-bottom:1px #E9E9E9 solid;	padding-bottom:10px;	margin-bottom:-1px;}
+div.sub_info div.title h1 			{	position:absolute;	left:0;	top:0;}
+div.sub_info div.title p 			{	padding-left:10px;	padding-top:7px;	padding-right:17px;	text-align:right;	font-size: 85%;}
+div.sub_info div.title p a:hover 	{	color:#000;	text-decoration: underline;	}
+div.sub_info div.title p em 		{	color:#3876A4;							}	
+div.sub_info div.action 			{	text-align:right;	margin-bottom:10px;	}
+div.sub_info div.sub_navi 			{	margin-left:2px;	padding-top:5px;	font-size:90%;	height:21px;	position:relative;	}
+div.sub_info div.sub_navi ul 		{	position:absolute;	left:10px;			}
+div.sub_info div.sub_navi li 		{	border:1px #D5D5D5 solid;	background-color:#FFFFFF;	text-align:center;	float:left;	padding:3px 14px;	margin-right:1px;}
+div.sub_info div.sub_navi li a:hover{	color:#000;	text-decoration: underline;		}
+div.sub_info div.sub_navi li.on 	{	border-top:1px #D5D5D5 solid;	border-right:1px #D5D5D5 solid;	border-bottom:1px #F4F4F4 solid;	border-left:1px #D5D5D5 solid;	background-color:#F4F4F4;	color:#3876A4;	font-weight:bold;	}
+div.sub_info div.sub_navi li.on a 	{	color:#3876A4;	}
+div.sub_info div.search 			{	margin-left:2px;	margin-bottom:5px;	padding-top:10px;	padding-left:23px;	height:32px;	min-width:900px;	width:900px;	background:url(/web/imgs/search_bg.gif) left top no-repeat;	}
+div.sub_info div.search2 			{	margin-left:2px;	margin-bottom:5px;	padding-top:5px;	padding-left:23px;	height:59px;	min-width:900px;	width:900px;	background:url(/web/imgs/search_bg2.gif) left top no-repeat;	}
+div.sub_info div.search em,
+div.sub_info div.search2 em 		{	font-weight:bold;	color:#3876A4;	margin-right:2px;	}
+div.sub_info ul.under_info 			{	background-color:#f5f5f5;	padding:10px 20px;	margin-bottom:15px;	}
+div.sub_info ul.under_info em 		{	font-weight:bold;	color:#3876A4;						}
+div.sub_info div.info_img 			{	width:97%;	text-align:center;	border:5px #f1f1f1 solid;	padding:15px 0;	margin-bottom:20px;	}
+div.sub_info div.map_img 			{	width:710px; 	position:relative;	height:330px;	margin-bottom:20px;	background:url(/web/imgs/map_img_line.gif) left top repeat-y;	}
+div.sub_info div.map_img div.all 	{	padding:10px;	position:absolute;	left:0;	top:0;	width:310px;	height:310px;	background-color:#F0F0F0;	}
+div.sub_info div.map_img div.detail {	margin-left:380px;	padding:10px;	width:310px;	height:310px;	background-color:#F0F0F0;					}
+div.sub_info div.img_detail 		{	width:97%;	text-align:center;	border:5px #ccc solid;	padding:15px 0;	margin-bottom:20px;						}	
+div.sub_info ul.sitemap 			{	width:710px; 	float:left;					}	
+div.sub_info ul.sitemap li 			{	width:175px;	float:left;					}	
+div.sub_info div.login 				{
+	width:610px;
+	padding:30px 40px 0 40px;
+	height:250px;
+	background:url(/web/imgs/login_bg.gif) left top no-repeat;
+}
+div.sub_info div.login h3 			{	background:none;	text-align:center;	padding-bottom:12px;	border-bottom:1px #ccc solid;	margin-bottom:15px;		}
+div.sub_info div.login ul 			{	margin-left:180px;	position:relative;		}
+div.sub_info div.login li.id 		{	font-size:80%;		font-weight:bold;		}
+div.sub_info div.login li.id input 	{	margin-left:7px;							}
+div.sub_info div.login li.pw 		{	font-size:80%;		font-weight:bold;		}
+div.sub_info div.login li.pw input 	{	margin-left:4px;							}
+div.sub_info div.login li.action 	{	position:absolute;	top:0px;	left:170px;	}
+
+/* 지역관리자 aws */
+#now_aws {
+	position:relative; 
+	background:url(/web/imgs/now_aws_bg.gif) left top no-repeat; 
+	height:1028px;
+	width:1280px;
+}
+#now_aws h1 {
+	color:#fff;
+	background-color:#000;
+	padding-top:10px;
+	font-size:43px;
+	height:60px;
+	text-align:center;
+}
+#now_aws h1 em {
+	padding-left:50px;
+	color:#000;
+	font-size:9px;
+}
+
+#now_aws ul.info {
+	margin-top:10px;
+	border:1px #3876A4 solid;
+	width:200px;
+	background-color:#fff;
+}
+#now_aws ul.info li.data {
+	color:#3876A4;
+	padding:7px 10px;
+	font-weight:bold;
+	font-size:37px;
+	text-align:right;
+}
+#now_aws ul.info li.data em {
+	color:#000;
+	font-size:37px;
+	margin-left:10px;
+}
+#now_aws h2 {
+	font-size:xx-large;
+	/*background:url(/web/imgs/m_icon2.gif) left 3px no-repeat;*/
+	background:none;
+	padding-left:20px;
+	height:30px;
+	margin-bottom:20px;
+	color:#fff;
+}
+#now_aws div.wd 	{	position:absolute; 	top:110px; 	left:210px;	text-align:center;	width:260px;	height:260px;	}
+#now_aws div.ws 	{	position:absolute; 	top:110px; 	left:490px;	text-align:center;	width:260px;	height:260px;	}
+#now_aws div.hum 	{	position:absolute; 	top:110px; 	left:770px;	text-align:center;	width:260px;	height:260px;	}
+#now_aws div.temp 	{	position:absolute; 	top:110px; 	left:1020px;text-align:center;	width:260px;	height:260px;	}
+#now_aws div.wd p, 
+#now_aws div.ws p, 
+#now_aws div.hum p, 
+#now_aws div.temp p 		{	height:270px;				}
+#now_aws ul.vis,
+#now_aws ul.prec,
+#now_aws ul.pres,
+#now_aws ul.weat 			{	position:absolute; 	border:1px #3876A4 solid;	width:410px;	background-color:#fff;		}
+#now_aws ul.vis 			{	top:570px; 	left:330px;		}
+#now_aws ul.prec 			{	top:570px; 	left:755px;		}
+#now_aws ul.pres 			{	top:700px; 	left:330px;		}
+#now_aws ul.weat 			{	top:700px; 	left:755px;		}
+#now_aws ul.vis  li,
+#now_aws ul.prec li,
+#now_aws ul.pres li,
+#now_aws ul.weat li 		{	font-weight:bold;	font-size:37px;													}
+#now_aws ul.vis li.factor,
+#now_aws ul.prec li.factor,
+#now_aws ul.pres li.factor,
+#now_aws ul.weat li.factor 	{	clear:both;	background-color:#3876A4;	color:#fff;	padding:7px 20px;				}
+#now_aws ul.vis li.data,
+#now_aws ul.prec li.data,
+#now_aws ul.pres li.data,
+#now_aws ul.weat li.data 	{	float:left;	color:#3876A4;	width:300px;	text-align:right;	padding:7px 10px;	}
+#now_aws ul.vis li.unit,
+#now_aws ul.prec li.unit,
+#now_aws ul.pres li.unit 	{	float:left;	width:50px;	text-align:center;	padding:7px 0;							}
+
+/*	Toggle button	*/
+#btn_left_right				{	position:absolute;	top:44px;	left:167px;	text-align:right;	z-index:10;			}
+
+/*	time selection button	*/
+
+.time_selection_btn{
+	font-size:90%;
+	float:left;
+	background-image:url(/web/imgs/btn_m.gif);
+	background-position:left top; 
+	background-repeat:no-repeat; 
+	width:47px;
+	height:16px;
+	color:#FFFFFF;
+	text-align:center;
+	padding-top:	1px;
+	margin-top:		1px;
+	margin-left:	1px;
+	margin-right:	1px;
+}
+
+.time_selection_btn a			{	color:#FFFFFF;									}
+.time_selection_btn a:hover		{	color:#FFFFFF;	text-decoration: underline;		}
+
+/*
+normal selection button
+*/
+.time_selection_btn2{
+	font-size:90%;
+	float:left;
+	background-image:url(/web/imgs/btn_m2.gif);
+	background-position:left top; 
+	background-repeat:no-repeat; 
+	width:51px;
+	height:21px;
+	color:#FFFFFF;
+	text-align:center;
+	padding-top:3px;
+}
+
+.time_selection_btn2 a			{	color:#FFFFFF;									}
+.time_selection_btn2 a:hover	{	color:#FFFFFF;	text-decoration: underline;		}
+
+/*	sorting	---------------------------------------------------------------------------*/
+
+.sort-arrow {
+	width:					11px;
+	height:					11px;
+	background-position:	center center;
+	background-repeat:		no-repeat;
+	margin:					0 2px;
+}
+.sort-arrow.descending	{	background-image:		url("/web/imgs/downsimple.png");	}
+.sort-arrow.ascending	{	background-image:		url("/web/imgs/upsimple.png");		}
+.rowcolor1 				{	background-color:		#F3F3F3;							}
+.rowcolor0 				{	}
+</STYLE>
+		<DIV STYLE="font-size:17px;font-weight:bold;color:#202020;text-align:center;">Search of Past Data</DIV>	
+	
+</HEAD>
+<BODY>
+	
+	<DIV ID="inner_weather_list" >
+		<H3><EM>Precipitation (mm)</EM>[ 72. ROI ET Agrometeorlogical / 2022 ] </H3>
+					<table  class="type_a" width="715">
+				<thead>
+					<tr>
+						<th width="55">Date</th>
+						<th width="55">Jan</th>
+						<th width="55">Feb</th>
+						<th width="55">Mar</th>
+						<th width="55">Apr</th>
+						<th width="55">May</th>
+						<th width="55">Jun</th>
+						<th width="55">Jul</th>
+						<th width="55">Aug</th>
+						<th width="55">Sep</th>
+						<th width="55">Oct</th>
+						<th width="55">Nov</th>
+						<th width="55">Dec</th>
+					</tr>
+				</thead>
+				<tbody><tr  class='rowcolor0'><th style='text-align:center'><b>01D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;5.8</td>
+<td>&nbsp;6.8</td>
+<td>&nbsp;0.2</td>
+<td>&nbsp;0.6</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor1' ><th style='text-align:center'><b>02D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;15.6</td>
+<td>&nbsp;0.6</td>
+<td>&nbsp;1.0</td>
+<td>&nbsp;0.2</td>
+<td>&nbsp;3.2</td>
+<td>&nbsp;4.8</td>
+<td>&nbsp;47.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor0'><th style='text-align:center'><b>03D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;7.2</td>
+<td>&nbsp;32.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;12.2</td>
+<td>&nbsp;11.0</td>
+<td>&nbsp;11.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor1' ><th style='text-align:center'><b>04D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;1.8</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;1.4</td>
+<td>&nbsp;6.2</td>
+<td>&nbsp;6.6</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor0'><th style='text-align:center'><b>05D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.8</td>
+<td>&nbsp;4.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor1' ><th style='text-align:center'><b>06D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.2</td>
+<td>&nbsp;0.6</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor0'><th style='text-align:center'><b>07D</b></th><td>&nbsp;-</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;29.6</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;4.0</td>
+<td>&nbsp;18.4</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;4.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor1' ><th style='text-align:center'><b>08D</b></th><td>&nbsp;-</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;2.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;86.4</td>
+<td>&nbsp;0.8</td>
+<td>&nbsp;43.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor0'><th style='text-align:center'><b>09D</b></th><td>&nbsp;-</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;1.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.6</td>
+<td>&nbsp;39.2</td>
+<td>&nbsp;0.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor1' ><th style='text-align:center'><b>10D</b></th><td>&nbsp;-</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;47.4</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;40.4</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor0'><th style='text-align:center'><b>11D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;59.8</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;6.4</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;1.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor1' ><th style='text-align:center'><b>12D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;7.2</td>
+<td>&nbsp;20.2</td>
+<td>&nbsp;22.6</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor0'><th style='text-align:center'><b>13D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;159.8</td>
+<td>&nbsp;27.8</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.4</td>
+</tr>
+<tr  class='rowcolor1' ><th style='text-align:center'><b>14D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;1.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;5.4</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor0'><th style='text-align:center'><b>15D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;7.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;75.2</td>
+<td>&nbsp;40.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;4.2</td>
+<td>&nbsp;3.6</td>
+<td>&nbsp;18.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor1' ><th style='text-align:center'><b>16D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;5.4</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;48.4</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;3.4</td>
+<td>&nbsp;12.6</td>
+<td>&nbsp;30.6</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor0'><th style='text-align:center'><b>17D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;4.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;16.2</td>
+<td>&nbsp;0.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor1' ><th style='text-align:center'><b>18D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;6.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;8.4</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.8</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor0'><th style='text-align:center'><b>19D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;2.4</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;4.6</td>
+<td>&nbsp;13.0</td>
+<td>&nbsp;10.6</td>
+<td>&nbsp;46.6</td>
+<td>&nbsp;1.6</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor1' ><th style='text-align:center'><b>20D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;1.2</td>
+<td>&nbsp;8.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;13.2</td>
+<td>&nbsp;37.2</td>
+<td>&nbsp;11.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor0'><th style='text-align:center'><b>21D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;4.2</td>
+<td>&nbsp;12.4</td>
+<td>&nbsp;21.4</td>
+<td>&nbsp;0.2</td>
+<td>&nbsp;4.8</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor1' ><th style='text-align:center'><b>22D</b></th><td>&nbsp;6.6</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.2</td>
+<td>&nbsp;1.8</td>
+<td>&nbsp;2.8</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;5.0</td>
+<td>&nbsp;2.8</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor0'><th style='text-align:center'><b>23D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;13.8</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;2.2</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor1' ><th style='text-align:center'><b>24D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;2.6</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.4</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor0'><th style='text-align:center'><b>25D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;17.0</td>
+<td>&nbsp;1.0</td>
+<td>&nbsp;3.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.2</td>
+<td>&nbsp;0.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;26.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor1' ><th style='text-align:center'><b>26D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;7.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;13.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;25.4</td>
+<td>&nbsp;8.4</td>
+<td>&nbsp;1.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;5.6</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor0'><th style='text-align:center'><b>27D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;38.6</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;5.6</td>
+<td>&nbsp;0.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;2.4</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.2</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor1' ><th style='text-align:center'><b>28D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;64.4</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;13.6</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor0'><th style='text-align:center'><b>29D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;35.2</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor1' ><th style='text-align:center'><b>30D</b></th><td>&nbsp;0.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.4</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.6</td>
+<td>&nbsp;2.6</td>
+<td>&nbsp;11.2</td>
+<td>&nbsp;7.4</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr  class='rowcolor0'><th style='text-align:center'><b>31D</b></th><td>&nbsp;0.2</td>
+<td>&nbsp;</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;8.2</td>
+<td>&nbsp;</td>
+<td>&nbsp;4.0</td>
+<td>&nbsp;2.2</td>
+<td>&nbsp;</td>
+<td>&nbsp;0.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;0.0</td>
+</tr>
+<tr>
+<th class='cate3' style='text-align:center'>Sum</th>
+<th class='cate3' style='text-align:right'>&nbsp;6.8</th>
+<th class='cate3' style='text-align:right'>&nbsp;20.2</th>
+<th class='cate3' style='text-align:right'>&nbsp;123.4</th>
+<th class='cate3' style='text-align:right'>&nbsp;89.0</th>
+<th class='cate3' style='text-align:right'>&nbsp;253.0</th>
+<th class='cate3' style='text-align:right'>&nbsp;304.4</th>
+<th class='cate3' style='text-align:right'>&nbsp;277.4</th>
+<th class='cate3' style='text-align:right'>&nbsp;203.0</th>
+<th class='cate3' style='text-align:right'>&nbsp;223.0</th>
+<th class='cate3' style='text-align:right'>&nbsp;97.0</th>
+<th class='cate3' style='text-align:right'>&nbsp;34.4</th>
+<th class='cate3' style='text-align:right'>&nbsp;0.4</th>
+</tr>
+</tbody>
+
+		</TABLE>
+	</DIV>
+	<DIV ID="inner_weather_result"></DIV>
+	
+</body>
+</HTML>
