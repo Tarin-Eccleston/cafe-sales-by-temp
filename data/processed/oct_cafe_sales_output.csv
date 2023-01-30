@@ -1,4 +1,4 @@
-payment date,quantity,hot_drink_sale,iced_drink_sale,frappe_drink_sale,other,net price
+datetime,quantity,hot_drink_sale,iced_drink_sale,frappe_drink_sale,other,net price
 01/10/2022,87,6,60,11,10,4620.0
 02/10/2022,75,4,48,10,13,4170.0
 03/10/2022,109,3,64,7,35,4905.0
